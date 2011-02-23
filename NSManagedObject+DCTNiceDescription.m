@@ -17,12 +17,21 @@
 	
 	NSMutableString *string = [NSMutableString string];
 	
-	for (id property in [[entity attributesByName] allKeys]) {
+	NSArray *attributeNames = [[entity attributesByName] allKeys];
+	
+	NSString *lastName = [attributeNames lastObject];
+	
+	for (NSString *attributeName in attributeNames) {
 		
-		id value = [self valueForKey:property];
+		id value = [self valueForKey:attributeName];
 		
-		if ((value))		
-			[string appendFormat:@"%@, ", value];
+		if ((value)) {
+			[string appendString:[value description]];
+			
+			if (![attributeName isEqual:lastName]) 
+				[string appendString:@", "];
+			
+		}
 	}
 	return string;
 }
