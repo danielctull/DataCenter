@@ -1,0 +1,3 @@
+[submodule "SampleCoreData"]
+	path = SampleCoreData
+	url = git://github.com/danielctull/SampleCoreData.git
