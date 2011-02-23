@@ -1,0 +1,274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24C62EB01315C17B00E10F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EAF1315C17B00E10F15 /* UIKit.framework */; };
+		24C62EB21315C17B00E10F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB11315C17B00E10F15 /* Foundation.framework */; };
+		24C62EB41315C17B00E10F15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB31315C17B00E10F15 /* CoreGraphics.framework */; };
+		24C62EB61315C17B00E10F15 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB51315C17B00E10F15 /* CoreData.framework */; };
+		24C62EBC1315C17C00E10F15 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24C62EBA1315C17B00E10F15 /* InfoPlist.strings */; };
+		24C62EBF1315C17C00E10F15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C62EBE1315C17C00E10F15 /* main.m */; };
+		24C62EC21315C17C00E10F15 /* DataCenterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C62EC11315C17C00E10F15 /* DataCenterAppDelegate.m */; };
+		24C62EC51315C17C00E10F15 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C62EC31315C17C00E10F15 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24C62EAB1315C17B00E10F15 /* DataCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C62EAF1315C17B00E10F15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24C62EB11315C17B00E10F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24C62EB31315C17B00E10F15 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		24C62EB51315C17B00E10F15 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		24C62EB91315C17B00E10F15 /* DataCenter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataCenter-Info.plist"; sourceTree = "<group>"; };
+		24C62EBB1315C17C00E10F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24C62EBD1315C17C00E10F15 /* DataCenter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataCenter-Prefix.pch"; sourceTree = "<group>"; };
+		24C62EBE1315C17C00E10F15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24C62EC01315C17C00E10F15 /* DataCenterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenterAppDelegate.h; sourceTree = "<group>"; };
+		24C62EC11315C17C00E10F15 /* DataCenterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCenterAppDelegate.m; sourceTree = "<group>"; };
+		24C62EC41315C17C00E10F15 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24C62EA81315C17B00E10F15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C62EB01315C17B00E10F15 /* UIKit.framework in Frameworks */,
+				24C62EB21315C17B00E10F15 /* Foundation.framework in Frameworks */,
+				24C62EB41315C17B00E10F15 /* CoreGraphics.framework in Frameworks */,
+				24C62EB61315C17B00E10F15 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24C62EA01315C17B00E10F15 = {
+			isa = PBXGroup;
+			children = (
+				24C62EB71315C17B00E10F15 /* DataCenter */,
+				24C62EAE1315C17B00E10F15 /* Frameworks */,
+				24C62EAC1315C17B00E10F15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24C62EAC1315C17B00E10F15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24C62EAB1315C17B00E10F15 /* DataCenter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24C62EAE1315C17B00E10F15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24C62EAF1315C17B00E10F15 /* UIKit.framework */,
+				24C62EB11315C17B00E10F15 /* Foundation.framework */,
+				24C62EB31315C17B00E10F15 /* CoreGraphics.framework */,
+				24C62EB51315C17B00E10F15 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24C62EB71315C17B00E10F15 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				24C62EC01315C17C00E10F15 /* DataCenterAppDelegate.h */,
+				24C62EC11315C17C00E10F15 /* DataCenterAppDelegate.m */,
+				24C62EC31315C17C00E10F15 /* MainWindow.xib */,
+				24C62EB81315C17B00E10F15 /* Supporting Files */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		24C62EB81315C17B00E10F15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24C62EB91315C17B00E10F15 /* DataCenter-Info.plist */,
+				24C62EBA1315C17B00E10F15 /* InfoPlist.strings */,
+				24C62EBD1315C17C00E10F15 /* DataCenter-Prefix.pch */,
+				24C62EBE1315C17C00E10F15 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24C62EAA1315C17B00E10F15 /* DataCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24C62ECB1315C17C00E10F15 /* Build configuration list for PBXNativeTarget "DataCenter" */;
+			buildPhases = (
+				24C62EA71315C17B00E10F15 /* Sources */,
+				24C62EA81315C17B00E10F15 /* Frameworks */,
+				24C62EA91315C17B00E10F15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataCenter;
+			productName = DataCenter;
+			productReference = 24C62EAB1315C17B00E10F15 /* DataCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24C62EA21315C17B00E10F15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Daniel Tull";
+			};
+			buildConfigurationList = 24C62EA51315C17B00E10F15 /* Build configuration list for PBXProject "DataCenter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 24C62EA01315C17B00E10F15;
+			productRefGroup = 24C62EAC1315C17B00E10F15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24C62EAA1315C17B00E10F15 /* DataCenter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24C62EA91315C17B00E10F15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C62EBC1315C17C00E10F15 /* InfoPlist.strings in Resources */,
+				24C62EC51315C17C00E10F15 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24C62EA71315C17B00E10F15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24C62EBF1315C17C00E10F15 /* main.m in Sources */,
+				24C62EC21315C17C00E10F15 /* DataCenterAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		24C62EBA1315C17B00E10F15 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24C62EBB1315C17C00E10F15 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24C62EC31315C17C00E10F15 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24C62EC41315C17C00E10F15 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24C62EC91315C17C00E10F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24C62ECA1315C17C00E10F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		24C62ECC1315C17C00E10F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenter/DataCenter-Prefix.pch";
+				INFOPLIST_FILE = "DataCenter/DataCenter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		24C62ECD1315C17C00E10F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenter/DataCenter-Prefix.pch";
+				INFOPLIST_FILE = "DataCenter/DataCenter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24C62EA51315C17B00E10F15 /* Build configuration list for PBXProject "DataCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C62EC91315C17C00E10F15 /* Debug */,
+				24C62ECA1315C17C00E10F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24C62ECB1315C17C00E10F15 /* Build configuration list for PBXNativeTarget "DataCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24C62ECC1315C17C00E10F15 /* Debug */,
+				24C62ECD1315C17C00E10F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24C62EA21315C17B00E10F15 /* Project object */;
+}
