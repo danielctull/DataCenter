@@ -23,7 +23,7 @@ Changes made to the master branch will be merged across to production, so it wil
 
 To add the production branch rather than master, simply use the -b flag as shown below.
 
-bc. git submodule add -b production git://github.com/danielctull/DCTCoreData.git
+bc. git submodule add -b production git://github.com/danielctull/DataCenter.git
 
 To keep up to date with the latest changes `cd` into the directory that contains this submodule and pull the newest changes as usual
 
