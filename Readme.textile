@@ -4,8 +4,7 @@ DataCenter is a collection of classes that allow you to explore the data stored 
 
 Including these in your app during debugging and testing phases will allow you to explore the data if anything seems awry. It's pretty basic at the moment.
 
-
-
+!http://danieltull.co.uk/DataCenter/screenshots/datacenter.png!
 
 h2. Branch Structure
 
