@@ -4,6 +4,8 @@ DataCenter is a collection of classes that allow you to explore the data stored 
 
 Including these in your app during debugging and testing phases will allow you to explore the data if anything seems awry. It's pretty basic at the moment.
 
+*Note:* If using this in your own project, you do not need to get or use the "SampleCoreData":https://github.com/danielctull/SampleCoreData submodule as this just provides the sample data for the test project in the master branch (see Branch Structure below).
+
 !http://danieltull.co.uk/DataCenter/screenshots/datacenter.png! !http://danieltull.co.uk/DataCenter/screenshots/person.png!
 
 h2. Branch Structure
