@@ -84,6 +84,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	
 	if (section == DCTManagedObjectViewControllerAttributeSection)
 		return @"Attributes";
 	
@@ -104,7 +105,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:AttributeIdentifier] autorelease];
 	
 	
-	if (indexPath.section == DCTManagedObjectViewControllerAttributeSection) {
+	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerAttributeSection) {
 		
 		NSString *attributeName = [attributes objectAtIndex:indexPath.row];
 		
@@ -114,7 +115,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	
-	if (indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
+	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
 		
 		NSString *relationshipName = [relationships objectAtIndex:indexPath.row];
 		
@@ -135,7 +136,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 
 - (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	if (indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
+	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
 		
 		NSString *relationshipName = [relationships objectAtIndex:indexPath.row];
 		
