@@ -113,6 +113,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		cell.detailTextLabel.text = [[managedObject valueForKey:attributeName] description];
 		
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+		cell.accessoryType = UITableViewCellAccessoryNone;
 	}
 	
 	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
