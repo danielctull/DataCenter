@@ -27,6 +27,11 @@
 	[self becomeFirstResponder];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[self resignFirstResponder];
+}
+
 #pragma mark - UIResponder
 
 - (BOOL)canBecomeFirstResponder {
