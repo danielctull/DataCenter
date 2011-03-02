@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2495536F131E7CBA006C354A /* DCTContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495533E131E7CBA006C354A /* DCTContainerViewController.m */; };
+		24955370131E7CBA006C354A /* DCTContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955340131E7CBA006C354A /* DCTContentViewController.m */; };
+		24955371131E7CBA006C354A /* DCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955342131E7CBA006C354A /* DCTTableViewController.m */; };
+		24955372131E7CBA006C354A /* DCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955344131E7CBA006C354A /* DCTViewController.m */; };
 		24C62EB01315C17B00E10F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EAF1315C17B00E10F15 /* UIKit.framework */; };
 		24C62EB21315C17B00E10F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB11315C17B00E10F15 /* Foundation.framework */; };
 		24C62EB41315C17B00E10F15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB31315C17B00E10F15 /* CoreGraphics.framework */; };
@@ -26,6 +30,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2495533D131E7CBA006C354A /* DCTContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTContainerViewController.h; sourceTree = "<group>"; };
+		2495533E131E7CBA006C354A /* DCTContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTContainerViewController.m; sourceTree = "<group>"; };
+		2495533F131E7CBA006C354A /* DCTContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTContentViewController.h; sourceTree = "<group>"; };
+		24955340131E7CBA006C354A /* DCTContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTContentViewController.m; sourceTree = "<group>"; };
+		24955341131E7CBA006C354A /* DCTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTTableViewController.h; sourceTree = "<group>"; };
+		24955342131E7CBA006C354A /* DCTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTTableViewController.m; sourceTree = "<group>"; };
+		24955343131E7CBA006C354A /* DCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTViewController.h; sourceTree = "<group>"; };
+		24955344131E7CBA006C354A /* DCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTViewController.m; sourceTree = "<group>"; };
 		24C62EAB1315C17B00E10F15 /* DataCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C62EAF1315C17B00E10F15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24C62EB11315C17B00E10F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,7 +60,7 @@
 		24C62F8D1315C32200E10F15 /* DCTManagedObjectContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectContextViewController.m; sourceTree = "<group>"; };
 		24C62F8E1315C32200E10F15 /* DCTManagedObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectViewController.h; sourceTree = "<group>"; };
 		24C62F8F1315C32200E10F15 /* DCTManagedObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectViewController.m; sourceTree = "<group>"; };
-		24C62F901315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DCTManagedObjectRelationshipsViewController.h; sourceTree = "<group>"; };
+		24C62F901315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectRelationshipsViewController.h; sourceTree = "<group>"; };
 		24C62F911315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectRelationshipsViewController.m; sourceTree = "<group>"; };
 		24C62F921315C32200E10F15 /* NSManagedObject+DCTNiceDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+DCTNiceDescription.h"; sourceTree = "<group>"; };
 		24C62F931315C32200E10F15 /* NSManagedObject+DCTNiceDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+DCTNiceDescription.m"; sourceTree = "<group>"; };
@@ -69,9 +81,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		249552EC131E7CBA006C354A /* DCTUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2495533C131E7CBA006C354A /* View Controllers */,
+			);
+			name = DCTUIKit;
+			path = ../DCTUIKit;
+			sourceTree = "<group>";
+		};
+		2495533C131E7CBA006C354A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2495533D131E7CBA006C354A /* DCTContainerViewController.h */,
+				2495533E131E7CBA006C354A /* DCTContainerViewController.m */,
+				2495533F131E7CBA006C354A /* DCTContentViewController.h */,
+				24955340131E7CBA006C354A /* DCTContentViewController.m */,
+				24955341131E7CBA006C354A /* DCTTableViewController.h */,
+				24955342131E7CBA006C354A /* DCTTableViewController.m */,
+				24955343131E7CBA006C354A /* DCTViewController.h */,
+				24955344131E7CBA006C354A /* DCTViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		24C62EA01315C17B00E10F15 = {
 			isa = PBXGroup;
 			children = (
+				249552EC131E7CBA006C354A /* DCTUIKit */,
 				24C62ED71315C25F00E10F15 /* SampleCoreData */,
 				24C62F2A1315C32200E10F15 /* DataCenter */,
 				24C62EB71315C17B00E10F15 /* Example Classes */,
@@ -224,6 +261,10 @@
 				24C62FF61315C32200E10F15 /* DCTManagedObjectViewController.m in Sources */,
 				24C62FF71315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.m in Sources */,
 				24C62FF81315C32200E10F15 /* NSManagedObject+DCTNiceDescription.m in Sources */,
+				2495536F131E7CBA006C354A /* DCTContainerViewController.m in Sources */,
+				24955370131E7CBA006C354A /* DCTContentViewController.m in Sources */,
+				24955371131E7CBA006C354A /* DCTTableViewController.m in Sources */,
+				24955372131E7CBA006C354A /* DCTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

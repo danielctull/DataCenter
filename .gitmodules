@@ -1,3 +1,6 @@
 [submodule "SampleCoreData"]
 	path = SampleCoreData
 	url = git://github.com/danielctull/SampleCoreData.git
+[submodule "DCTUIKit"]
+	path = DCTUIKit
+	url = git://github.com/danielctull/DCTUIKit.git
