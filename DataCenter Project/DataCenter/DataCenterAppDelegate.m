@@ -8,6 +8,8 @@
 
 #import "DataCenterAppDelegate.h"
 #import "DCTManagedObjectContextViewController.h"
+#import "DCTDataCenterController.h"
+#import "TestViewController.h"
 
 @interface DataCenterAppDelegate ()
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
@@ -19,13 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	DCTManagedObjectContextViewController *vc = [[DCTManagedObjectContextViewController alloc] init];
-	vc.managedObjectContext = self.managedObjectContext;
+	TestViewController *tvc = [[TestViewController alloc] init];
+	DCTDataCenterController *dcc = [[DCTDataCenterController alloc] initWithViewController:tvc];
+	dcc.managedObjectContext = self.managedObjectContext;
+	[tvc release];
 	
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-	self.window.rootViewController = nav;
-	[nav release];
-	[vc release];
+	self.window.rootViewController = dcc;
+	[dcc release];
 	
 	[self.window makeKeyAndVisible];
     return YES;

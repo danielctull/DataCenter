@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2495536F131E7CBA006C354A /* DCTContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2495533E131E7CBA006C354A /* DCTContainerViewController.m */; };
+		24955370131E7CBA006C354A /* DCTContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955340131E7CBA006C354A /* DCTContentViewController.m */; };
+		24955371131E7CBA006C354A /* DCTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955342131E7CBA006C354A /* DCTTableViewController.m */; };
+		24955372131E7CBA006C354A /* DCTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955344131E7CBA006C354A /* DCTViewController.m */; };
+		24955376131E7E3E006C354A /* DCTDataCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24955375131E7E3E006C354A /* DCTDataCenterController.m */; };
+		249553C0131E81EA006C354A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249553A6131E81EA006C354A /* TestViewController.m */; };
+		249553C1131E81EA006C354A /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249553A7131E81EA006C354A /* TestViewController.xib */; };
 		24C62EB01315C17B00E10F15 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EAF1315C17B00E10F15 /* UIKit.framework */; };
 		24C62EB21315C17B00E10F15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB11315C17B00E10F15 /* Foundation.framework */; };
 		24C62EB41315C17B00E10F15 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C62EB31315C17B00E10F15 /* CoreGraphics.framework */; };
@@ -26,6 +33,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2495533D131E7CBA006C354A /* DCTContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTContainerViewController.h; sourceTree = "<group>"; };
+		2495533E131E7CBA006C354A /* DCTContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTContainerViewController.m; sourceTree = "<group>"; };
+		2495533F131E7CBA006C354A /* DCTContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTContentViewController.h; sourceTree = "<group>"; };
+		24955340131E7CBA006C354A /* DCTContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTContentViewController.m; sourceTree = "<group>"; };
+		24955341131E7CBA006C354A /* DCTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTTableViewController.h; sourceTree = "<group>"; };
+		24955342131E7CBA006C354A /* DCTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTTableViewController.m; sourceTree = "<group>"; };
+		24955343131E7CBA006C354A /* DCTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTViewController.h; sourceTree = "<group>"; };
+		24955344131E7CBA006C354A /* DCTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTViewController.m; sourceTree = "<group>"; };
+		24955374131E7E3E006C354A /* DCTDataCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTDataCenterController.h; sourceTree = "<group>"; };
+		24955375131E7E3E006C354A /* DCTDataCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTDataCenterController.m; sourceTree = "<group>"; };
+		249553A5131E81EA006C354A /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		249553A6131E81EA006C354A /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		249553A7131E81EA006C354A /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		24C62EAB1315C17B00E10F15 /* DataCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C62EAF1315C17B00E10F15 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24C62EB11315C17B00E10F15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,7 +68,7 @@
 		24C62F8D1315C32200E10F15 /* DCTManagedObjectContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectContextViewController.m; sourceTree = "<group>"; };
 		24C62F8E1315C32200E10F15 /* DCTManagedObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectViewController.h; sourceTree = "<group>"; };
 		24C62F8F1315C32200E10F15 /* DCTManagedObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectViewController.m; sourceTree = "<group>"; };
-		24C62F901315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DCTManagedObjectRelationshipsViewController.h; sourceTree = "<group>"; };
+		24C62F901315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectRelationshipsViewController.h; sourceTree = "<group>"; };
 		24C62F911315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectRelationshipsViewController.m; sourceTree = "<group>"; };
 		24C62F921315C32200E10F15 /* NSManagedObject+DCTNiceDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+DCTNiceDescription.h"; sourceTree = "<group>"; };
 		24C62F931315C32200E10F15 /* NSManagedObject+DCTNiceDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+DCTNiceDescription.m"; sourceTree = "<group>"; };
@@ -69,9 +89,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		249552EC131E7CBA006C354A /* DCTUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2495533C131E7CBA006C354A /* View Controllers */,
+			);
+			name = DCTUIKit;
+			path = ../DCTUIKit;
+			sourceTree = "<group>";
+		};
+		2495533C131E7CBA006C354A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2495533D131E7CBA006C354A /* DCTContainerViewController.h */,
+				2495533E131E7CBA006C354A /* DCTContainerViewController.m */,
+				2495533F131E7CBA006C354A /* DCTContentViewController.h */,
+				24955340131E7CBA006C354A /* DCTContentViewController.m */,
+				24955341131E7CBA006C354A /* DCTTableViewController.h */,
+				24955342131E7CBA006C354A /* DCTTableViewController.m */,
+				24955343131E7CBA006C354A /* DCTViewController.h */,
+				24955344131E7CBA006C354A /* DCTViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2495537D131E81EA006C354A /* SampleViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				249553A5131E81EA006C354A /* TestViewController.h */,
+				249553A6131E81EA006C354A /* TestViewController.m */,
+				249553A7131E81EA006C354A /* TestViewController.xib */,
+			);
+			name = SampleViewControllers;
+			path = ../SampleViewControllers;
+			sourceTree = "<group>";
+		};
 		24C62EA01315C17B00E10F15 = {
 			isa = PBXGroup;
 			children = (
+				249552EC131E7CBA006C354A /* DCTUIKit */,
+				2495537D131E81EA006C354A /* SampleViewControllers */,
 				24C62ED71315C25F00E10F15 /* SampleCoreData */,
 				24C62F2A1315C32200E10F15 /* DataCenter */,
 				24C62EB71315C17B00E10F15 /* Example Classes */,
@@ -139,6 +196,8 @@
 		24C62F2A1315C32200E10F15 /* DataCenter */ = {
 			isa = PBXGroup;
 			children = (
+				24955374131E7E3E006C354A /* DCTDataCenterController.h */,
+				24955375131E7E3E006C354A /* DCTDataCenterController.m */,
 				24C62F8C1315C32200E10F15 /* DCTManagedObjectContextViewController.h */,
 				24C62F8D1315C32200E10F15 /* DCTManagedObjectContextViewController.m */,
 				24C62F8E1315C32200E10F15 /* DCTManagedObjectViewController.h */,
@@ -205,6 +264,7 @@
 				24C62EBC1315C17C00E10F15 /* InfoPlist.strings in Resources */,
 				24C62EC51315C17C00E10F15 /* MainWindow.xib in Resources */,
 				24C62F201315C25F00E10F15 /* SampleCoreData.sqlite in Resources */,
+				249553C1131E81EA006C354A /* TestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +284,12 @@
 				24C62FF61315C32200E10F15 /* DCTManagedObjectViewController.m in Sources */,
 				24C62FF71315C32200E10F15 /* DCTManagedObjectRelationshipsViewController.m in Sources */,
 				24C62FF81315C32200E10F15 /* NSManagedObject+DCTNiceDescription.m in Sources */,
+				2495536F131E7CBA006C354A /* DCTContainerViewController.m in Sources */,
+				24955370131E7CBA006C354A /* DCTContentViewController.m in Sources */,
+				24955371131E7CBA006C354A /* DCTTableViewController.m in Sources */,
+				24955372131E7CBA006C354A /* DCTViewController.m in Sources */,
+				24955376131E7E3E006C354A /* DCTDataCenterController.m in Sources */,
+				249553C0131E81EA006C354A /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +323,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
@@ -271,7 +337,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
