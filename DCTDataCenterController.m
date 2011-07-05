@@ -13,13 +13,6 @@
 
 @synthesize managedObjectContext;
 
-#pragma mark - NSObject
-
-- (void)dealloc {
-	[managedObjectContext release], managedObjectContext = nil;
-	[super dealloc];
-}
-
 #pragma mark - UIViewController
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -48,7 +41,6 @@
 											  cancelButtonTitle:@"Cancel" 
 											  otherButtonTitles:@"Open", nil];
 		[alert show];
-		[alert release];
 	}
 }
 
@@ -64,13 +56,10 @@
 		
 		UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismiss:)];
 		mocvc.navigationItem.leftBarButtonItem = item;
-		[item release];
 		
 		UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mocvc];
-		[mocvc release];
 		
 		[self presentModalViewController:nav animated:YES];
-		[nav release];
 		
 	}
 }

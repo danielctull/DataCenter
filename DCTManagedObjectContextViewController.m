@@ -10,7 +10,10 @@
 #import "DCTManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
-@implementation DCTManagedObjectContextViewController
+@implementation DCTManagedObjectContextViewController {
+	__strong NSArray *entities;
+	__strong NSMutableDictionary *fetchedEntities;
+}
 
 @synthesize managedObjectContext;
 
@@ -24,23 +27,14 @@
 	return self;
 }
 
-- (void)dealloc {
-	[managedObjectContext release], managedObjectContext = nil;
-    [super dealloc];
-}
-
 #pragma mark - DCTManagedObjectContextViewController
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)moc {
 	
-	NSManagedObjectContext *old = managedObjectContext;
-	managedObjectContext = [moc retain];
-	[old release];
+	managedObjectContext = moc;
 	
-	[entities release];
-	entities = [[[[self.managedObjectContext persistentStoreCoordinator] managedObjectModel] entities] retain];
+	entities = [[[self.managedObjectContext persistentStoreCoordinator] managedObjectModel] entities];
 	
-	[fetchedEntities release];
 	fetchedEntities = [[NSMutableDictionary alloc] initWithCapacity:[entities count]];
 	
 	for (NSEntityDescription *entity in entities) {
@@ -48,7 +42,6 @@
 		NSFetchRequest *request = [[NSFetchRequest alloc] init];
 		[request setEntity:entity];
 		NSArray *fetchResult = [managedObjectContext executeFetchRequest:request error:NULL];
-		[request release];
 		
 		[fetchedEntities setObject:fetchResult forKey:[entity name]];
 	}
@@ -74,7 +67,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
 	NSEntityDescription *entity = [entities objectAtIndex:indexPath.section];
@@ -98,7 +91,6 @@
 	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
 	vc.managedObject = mo;
 	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
 }
 
 @end

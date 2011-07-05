@@ -6,10 +6,12 @@
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "DCTContentViewController.h"
+#import <UIKit/UIKit.h>
 
+@interface DCTDataCenterController : UIViewController
 
-@interface DCTDataCenterController : DCTContentViewController {}
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 - (IBAction)dismiss:(id)sender;
+
 @end

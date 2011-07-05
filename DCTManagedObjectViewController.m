@@ -16,50 +16,31 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 @interface DCTManagedObjectViewController ()
 @end
 
-@implementation DCTManagedObjectViewController
+@implementation DCTManagedObjectViewController {
+	__strong NSArray *relationships;
+	__strong NSArray *attributes;
+}
 
 @synthesize managedObject;
 
 #pragma mark - NSObject
 
-- (void)dealloc {
-	[attributes release], attributes = nil;
-	[relationships release], relationships = nil;
-	[managedObject release], managedObject = nil;
-    [super dealloc];
-}
-
 - (id)init {
 	return [self initWithStyle:UITableViewStyleGrouped];
-}
-
-#pragma mark - UIViewController
-
-- (void)viewDidLoad {	
-    [super viewDidLoad];
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
 }
 
 #pragma mark - DCTManagedObjectViewController
 
 - (void)setManagedObject:(NSManagedObject *)mo {
-	
-	NSManagedObject *oldManagedObject = managedObject;
-	managedObject = [mo retain];
-	[oldManagedObject release];
+	managedObject = mo;
 	
 	NSEntityDescription *entity = [managedObject entity];
 	
 	self.title = [entity name];
 	
-	[relationships release];
-	relationships = [[[entity relationshipsByName] allKeys] retain];
+	relationships = [[entity relationshipsByName] allKeys];
 	
-	[attributes release];
-	attributes = [[[entity attributesByName] allKeys] retain];
+	attributes = [[entity attributesByName] allKeys];
 	
 	if ([self isViewLoaded])
 		[self.tableView reloadData];
@@ -102,7 +83,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:AttributeIdentifier];
 	
 	if (cell == nil)
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:AttributeIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:AttributeIdentifier];
 	
 	
 	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerAttributeSection) {
@@ -150,7 +131,6 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 			DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
 			vc.managedObject = mo;
 			[self.navigationController pushViewController:vc animated:YES];
-			[vc release];
 			
 		} else {
 			
@@ -158,7 +138,6 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 			vc.managedObject = self.managedObject;
 			vc.relationship = relationship;
 			[self.navigationController pushViewController:vc animated:YES];
-			[vc release];
 			
 			
 		}

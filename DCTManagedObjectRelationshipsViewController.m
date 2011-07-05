@@ -14,7 +14,9 @@
 - (void)setupRelatedObjects;
 @end
 
-@implementation DCTManagedObjectRelationshipsViewController
+@implementation DCTManagedObjectRelationshipsViewController {
+	__strong NSArray *relatedObjects;
+}
 
 @synthesize managedObject, relationship;
 
@@ -22,19 +24,8 @@
 	return [self initWithStyle:UITableViewStyleGrouped];
 }
 
-- (void)dealloc {
-	[relatedObjects release], relatedObjects = nil;
-	[managedObject release], managedObject = nil;
-	[relationship release], relationship = nil;
-    [super dealloc];
-}
-
 - (void)setManagedObject:(NSManagedObject *)mo {
-	
-	NSManagedObject *oldManagedObject = managedObject;
-	managedObject = [mo retain];
-	[oldManagedObject release];
-	
+	managedObject = mo;
 	[self setupRelatedObjects];
 }
 
@@ -44,15 +35,11 @@
 	
 	NSSet *ro = [self.managedObject valueForKey:[relationship name]];
 	
-	[relatedObjects release];
-	relatedObjects = [[ro allObjects] retain];
+	relatedObjects = [ro allObjects];
 }
 
 - (void)setRelationship:(NSRelationshipDescription *)r {
-	
-	NSRelationshipDescription *old = relationship;
-	relationship = [r retain];
-	[old release];
+	relationship = r;
 	
 	self.title = [relationship name];
 	
@@ -70,8 +57,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	if (!(cell))
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-									   reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+									   reuseIdentifier:CellIdentifier];
     
 	cell.textLabel.text = [[relatedObjects objectAtIndex:indexPath.row] dct_niceDescription];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;	
@@ -86,7 +73,6 @@
 	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
 	vc.managedObject = [relatedObjects objectAtIndex:indexPath.row];
 	[self.navigationController pushViewController:vc animated:YES];
-	[vc release];
 }
 
 @end

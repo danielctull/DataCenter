@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface DCTManagedObjectRelationshipsViewController : UITableViewController {
-	NSArray *relatedObjects;
-}
+@interface DCTManagedObjectRelationshipsViewController : UITableViewController
 
-@property (nonatomic, retain) NSManagedObject *managedObject;
-@property (nonatomic, retain) NSRelationshipDescription *relationship;
+@property (nonatomic, strong) NSManagedObject *managedObject;
+@property (nonatomic, strong) NSRelationshipDescription *relationship;
 
 @end

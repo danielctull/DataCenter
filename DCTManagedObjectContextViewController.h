@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DCTManagedObjectContextViewController : UITableViewController {
-	NSArray *entities;
-	NSMutableDictionary *fetchedEntities;
-}
+@interface DCTManagedObjectContextViewController : UITableViewController
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @end
