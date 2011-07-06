@@ -12,8 +12,15 @@
 @implementation DCTDataCenterController
 
 @synthesize managedObjectContext;
+@synthesize viewController;
 
 #pragma mark - UIViewController
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	self.viewController.view.frame = self.view.bounds;
+	[self.view addSubview:self.viewController.view];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
@@ -42,6 +49,19 @@
 											  otherButtonTitles:@"Open", nil];
 		[alert show];
 	}
+}
+
+- (BOOL)automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers {
+    return YES;
+}
+
+- (void)setViewController:(UIViewController *)aViewController {
+    
+	if (self.viewController == aViewController) return;
+    
+    [self.viewController removeFromParentViewController];
+    viewController = aViewController;
+    [self addChildViewController:self.viewController];
 }
 
 #pragma mark - UIAlertViewDelegate

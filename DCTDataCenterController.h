@@ -14,4 +14,6 @@
 
 - (IBAction)dismiss:(id)sender;
 
+@property (nonatomic, retain) UIViewController *viewController;
+
 @end
