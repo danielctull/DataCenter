@@ -6,12 +6,12 @@
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
-NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
-
 #import "DCTManagedObjectViewController.h"
 #import "DCTManagedObjectRelationshipsViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
+
+NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
+NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 
 @interface DCTManagedObjectViewController ()
 @end
