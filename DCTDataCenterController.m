@@ -88,4 +88,8 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+	return [self.viewController shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];
+}
+
 @end
