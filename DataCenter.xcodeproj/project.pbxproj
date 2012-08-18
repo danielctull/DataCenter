@@ -13,7 +13,7 @@
 		245A59F415DFDFF300C6B474 /* _DCTDataCenterManagedObjectContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EC15DFDFF300C6B474 /* _DCTDataCenterManagedObjectContextViewController.m */; };
 		245A59F515DFDFF300C6B474 /* _DCTDataCenterManagedObjectRelationshipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EE15DFDFF300C6B474 /* _DCTDataCenterManagedObjectRelationshipsViewController.m */; };
 		245A59F615DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F015DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.m */; };
-		245A59F715DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F215DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.m */; };
+		245A59F715DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F215DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.m */; };
 		245A59F915DFDFFB00C6B474 /* DCTDataCenterController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */; };
 		245A5A0915DFE64F00C6B474 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245A5A0815DFE64F00C6B474 /* UIKit.framework */; };
 		245A5A0A15DFE64F00C6B474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245A59D815DFDF0A00C6B474 /* Foundation.framework */; };
@@ -55,8 +55,8 @@
 		245A59EE15DFDFF300C6B474 /* _DCTDataCenterManagedObjectRelationshipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTDataCenterManagedObjectRelationshipsViewController.m; sourceTree = "<group>"; };
 		245A59EF15DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTDataCenterManagedObjectViewController.h; sourceTree = "<group>"; };
 		245A59F015DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTDataCenterManagedObjectViewController.m; sourceTree = "<group>"; };
-		245A59F115DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+DCTDataCenterNiceDescription.h"; sourceTree = "<group>"; };
-		245A59F215DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+DCTDataCenterNiceDescription.m"; sourceTree = "<group>"; };
+		245A59F115DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+_DCTDataCenterNiceDescription.h"; sourceTree = "<group>"; };
+		245A59F215DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+_DCTDataCenterNiceDescription.m"; sourceTree = "<group>"; };
 		245A5A0615DFE64F00C6B474 /* DataCenter Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DataCenter Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		245A5A0815DFE64F00C6B474 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		245A5A0B15DFE64F00C6B474 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,8 +142,8 @@
 				245A59EE15DFDFF300C6B474 /* _DCTDataCenterManagedObjectRelationshipsViewController.m */,
 				245A59EF15DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.h */,
 				245A59F015DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.m */,
-				245A59F115DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.h */,
-				245A59F215DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.m */,
+				245A59F115DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.h */,
+				245A59F215DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.m */,
 				245A59DB15DFDF0A00C6B474 /* Supporting Files */,
 			);
 			path = DataCenter;
@@ -264,7 +264,7 @@
 				245A59F415DFDFF300C6B474 /* _DCTDataCenterManagedObjectContextViewController.m in Sources */,
 				245A59F515DFDFF300C6B474 /* _DCTDataCenterManagedObjectRelationshipsViewController.m in Sources */,
 				245A59F615DFDFF300C6B474 /* _DCTDataCenterManagedObjectViewController.m in Sources */,
-				245A59F715DFDFF300C6B474 /* NSManagedObject+DCTDataCenterNiceDescription.m in Sources */,
+				245A59F715DFDFF300C6B474 /* NSManagedObject+_DCTDataCenterNiceDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

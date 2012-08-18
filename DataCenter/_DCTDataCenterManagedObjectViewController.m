@@ -8,7 +8,7 @@
 
 #import "_DCTDataCenterManagedObjectViewController.h"
 #import "_DCTDataCenterManagedObjectRelationshipsViewController.h"
-#import "NSManagedObject+DCTDataCenterNiceDescription.h"
+#import "NSManagedObject+_DCTDataCenterNiceDescription.h"
 
 NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
 NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;

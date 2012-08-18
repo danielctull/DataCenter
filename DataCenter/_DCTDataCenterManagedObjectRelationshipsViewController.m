@@ -8,7 +8,7 @@
 
 #import "_DCTDataCenterManagedObjectRelationshipsViewController.h"
 #import "_DCTDataCenterManagedObjectViewController.h"
-#import "NSManagedObject+DCTDataCenterNiceDescription.h"
+#import "NSManagedObject+_DCTDataCenterNiceDescription.h"
 
 @implementation _DCTDataCenterManagedObjectRelationshipsViewController {
 	__strong NSArray *_relatedObjects;

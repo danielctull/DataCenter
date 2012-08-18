@@ -8,7 +8,7 @@
 
 #import "_DCTDataCenterManagedObjectContextViewController.h"
 #import "_DCTDataCenterManagedObjectViewController.h"
-#import "NSManagedObject+DCTDataCenterNiceDescription.h"
+#import "NSManagedObject+_DCTDataCenterNiceDescription.h"
 
 @implementation _DCTDataCenterManagedObjectContextViewController {
 	__strong NSArray *_entities;
