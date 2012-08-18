@@ -10,7 +10,7 @@
 		245A59D915DFDF0A00C6B474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245A59D815DFDF0A00C6B474 /* Foundation.framework */; };
 		245A59DE15DFDF0A00C6B474 /* DataCenter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 245A59DD15DFDF0A00C6B474 /* DataCenter.h */; };
 		245A59F315DFDFF300C6B474 /* DCTDataCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */; };
-		245A59F415DFDFF300C6B474 /* DCTManagedObjectContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */; };
+		245A59F415DFDFF300C6B474 /* _DCTManagedObjectContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EC15DFDFF300C6B474 /* _DCTManagedObjectContextViewController.m */; };
 		245A59F515DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */; };
 		245A59F615DFDFF300C6B474 /* DCTManagedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F015DFDFF300C6B474 /* DCTManagedObjectViewController.m */; };
 		245A59F715DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F215DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m */; };
@@ -38,8 +38,8 @@
 		245A59DD15DFDF0A00C6B474 /* DataCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
 		245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTDataCenterController.h; sourceTree = "<group>"; };
 		245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTDataCenterController.m; sourceTree = "<group>"; };
-		245A59EB15DFDFF300C6B474 /* DCTManagedObjectContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectContextViewController.h; sourceTree = "<group>"; };
-		245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectContextViewController.m; sourceTree = "<group>"; };
+		245A59EB15DFDFF300C6B474 /* _DCTManagedObjectContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTManagedObjectContextViewController.h; sourceTree = "<group>"; };
+		245A59EC15DFDFF300C6B474 /* _DCTManagedObjectContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTManagedObjectContextViewController.m; sourceTree = "<group>"; };
 		245A59ED15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectRelationshipsViewController.h; sourceTree = "<group>"; };
 		245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectRelationshipsViewController.m; sourceTree = "<group>"; };
 		245A59EF15DFDFF300C6B474 /* DCTManagedObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectViewController.h; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 				245A59DD15DFDF0A00C6B474 /* DataCenter.h */,
 				245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */,
 				245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */,
-				245A59EB15DFDFF300C6B474 /* DCTManagedObjectContextViewController.h */,
-				245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */,
+				245A59EB15DFDFF300C6B474 /* _DCTManagedObjectContextViewController.h */,
+				245A59EC15DFDFF300C6B474 /* _DCTManagedObjectContextViewController.m */,
 				245A59ED15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.h */,
 				245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */,
 				245A59EF15DFDFF300C6B474 /* DCTManagedObjectViewController.h */,
@@ -184,7 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				245A59F315DFDFF300C6B474 /* DCTDataCenterController.m in Sources */,
-				245A59F415DFDFF300C6B474 /* DCTManagedObjectContextViewController.m in Sources */,
+				245A59F415DFDFF300C6B474 /* _DCTManagedObjectContextViewController.m in Sources */,
 				245A59F515DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m in Sources */,
 				245A59F615DFDFF300C6B474 /* DCTManagedObjectViewController.m in Sources */,
 				245A59F715DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m in Sources */,

@@ -7,18 +7,19 @@
 //
 
 #import "DCTDataCenterController.h"
-#import "DCTManagedObjectContextViewController.h"
+#import "_DCTManagedObjectContextViewController.h"
 
 @implementation DCTDataCenterController
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
 	
-	DCTManagedObjectContextViewController *vc = [DCTManagedObjectContextViewController new];
-	vc.managedObjectContext = managedObjectContext;
+	_DCTManagedObjectContextViewController *vc = [[_DCTManagedObjectContextViewController alloc] initWithManagedObjectContext:managedObjectContext];
 	
 	self = [self initWithRootViewController:vc];
 	if (!self) return nil;
+	
 	_managedObjectContext = managedObjectContext;
+	
 	return self;
 }
 

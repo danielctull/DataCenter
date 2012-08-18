@@ -6,60 +6,51 @@
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "DCTManagedObjectContextViewController.h"
+#import "_DCTManagedObjectContextViewController.h"
 #import "DCTManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
-@implementation DCTManagedObjectContextViewController {
-	__strong NSArray *entities;
-	__strong NSMutableDictionary *fetchedEntities;
+@implementation _DCTManagedObjectContextViewController {
+	__strong NSArray *_entities;
+	__strong NSMutableDictionary *_fetchedEntities;
 }
 
-@synthesize managedObjectContext;
-
-#pragma mark - NSObject
-
-- (id)init {
-	if (!(self = [self initWithStyle:UITableViewStyleGrouped])) return nil;
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+	self = [self initWithStyle:UITableViewStyleGrouped];
+	if (!self) return nil;
 	
 	self.title = @"Data Center";
 	
-	return self;
-}
-
-#pragma mark - DCTManagedObjectContextViewController
-
-- (void)setManagedObjectContext:(NSManagedObjectContext *)moc {
+	_managedObjectContext = managedObjectContext;
 	
-	managedObjectContext = moc;
+	_entities = [[[_managedObjectContext persistentStoreCoordinator] managedObjectModel] entities];
 	
-	entities = [[[self.managedObjectContext persistentStoreCoordinator] managedObjectModel] entities];
+	_fetchedEntities = [[NSMutableDictionary alloc] initWithCapacity:[_entities count]];
 	
-	fetchedEntities = [[NSMutableDictionary alloc] initWithCapacity:[entities count]];
-	
-	for (NSEntityDescription *entity in entities) {
+	[_entities enumerateObjectsUsingBlock:^(NSEntityDescription *entity, NSUInteger i, BOOL *stop) {
 		
 		NSFetchRequest *request = [[NSFetchRequest alloc] init];
 		[request setEntity:entity];
 		NSArray *fetchResult = [managedObjectContext executeFetchRequest:request error:NULL];
 		
-		[fetchedEntities setObject:fetchResult forKey:[entity name]];
-	}
+		[_fetchedEntities setObject:fetchResult forKey:[entity name]];
+	}];
 	
+	return self;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [entities count];
+    return [_entities count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [[entities objectAtIndex:section] name];
+	return [[_entities objectAtIndex:section] name];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[fetchedEntities objectForKey:[[entities objectAtIndex:section] name]] count];
+    return [[_fetchedEntities objectForKey:[[_entities objectAtIndex:section] name]] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,8 +61,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-	NSEntityDescription *entity = [entities objectAtIndex:indexPath.section];
-	NSArray *objects = [fetchedEntities objectForKey:[entity name]];
+	NSEntityDescription *entity = [_entities objectAtIndex:indexPath.section];
+	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
 	NSManagedObject *mo = [objects objectAtIndex:indexPath.row];
 	
 	cell.textLabel.text = [mo dct_niceDescription];
@@ -84,11 +75,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	NSEntityDescription *entity = [entities objectAtIndex:indexPath.section];
-	NSArray *objects = [fetchedEntities objectForKey:[entity name]];
+	NSEntityDescription *entity = [_entities objectAtIndex:indexPath.section];
+	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
 	NSManagedObject *mo = [objects objectAtIndex:indexPath.row];
 	
-	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
+	DCTManagedObjectViewController *vc = [DCTManagedObjectViewController new];
 	vc.managedObject = mo;
 	[self.navigationController pushViewController:vc animated:YES];
 }
