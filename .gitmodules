@@ -7,3 +7,6 @@
 [submodule "SampleViewControllers"]
 	path = SampleViewControllers
 	url = git://github.com/danielctull/SampleViewControllers.git
+[submodule "DCTCoreDataStack"]
+	path = DCTCoreDataStack
+	url = git://github.com/danielctull/DCTCoreDataStack.git
