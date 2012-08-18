@@ -17,36 +17,26 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 @end
 
 @implementation DCTManagedObjectViewController {
-	__strong NSArray *relationships;
-	__strong NSArray *attributes;
+	__strong NSArray *_relationships;
+	__strong NSArray *_attributes;
 }
 
-@synthesize managedObject;
-
-#pragma mark - NSObject
-
-- (id)init {
-	return [self initWithStyle:UITableViewStyleGrouped];
-}
-
-#pragma mark - DCTManagedObjectViewController
-
-- (void)setManagedObject:(NSManagedObject *)mo {
-	managedObject = mo;
+- (id)initWithManagedObject:(NSManagedObject *)managedObject {
+	
+	self = [self initWithStyle:UITableViewStyleGrouped];
+	if (!self) return nil;
+	
+	_managedObject = managedObject;
 	
 	NSEntityDescription *entity = [managedObject entity];
-	
 	self.title = [entity name];
+	_relationships = [[entity relationshipsByName] allKeys];
+	_attributes = [[entity attributesByName] allKeys];
 	
-	relationships = [[entity relationshipsByName] allKeys];
-	
-	attributes = [[entity attributesByName] allKeys];
-	
-	if ([self isViewLoaded])
-		[self.tableView reloadData];
+	return self;
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
@@ -55,10 +45,10 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
 	if (section == DCTManagedObjectViewControllerAttributeSection)
-		return [attributes count];
+		return [_attributes count];
 	
 	if (section == DCTManagedObjectViewControllerRelationshipSection)
-		return [relationships count];
+		return [_relationships count];
 	
     return 0;
 }
@@ -88,10 +78,10 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 	
 	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerAttributeSection) {
 		
-		NSString *attributeName = [attributes objectAtIndex:indexPath.row];
+		NSString *attributeName = [_attributes objectAtIndex:indexPath.row];
 		
 		cell.textLabel.text = attributeName;
-		cell.detailTextLabel.text = [[managedObject valueForKey:attributeName] description];
+		cell.detailTextLabel.text = [[self.managedObject valueForKey:attributeName] description];
 		
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		cell.accessoryType = UITableViewCellAccessoryNone;
@@ -99,7 +89,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 	
 	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
 		
-		NSString *relationshipName = [relationships objectAtIndex:indexPath.row];
+		NSString *relationshipName = [_relationships objectAtIndex:indexPath.row];
 		
 		cell.textLabel.text = relationshipName;
 		
@@ -108,7 +98,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		if ([relationship isToMany])
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"Many %@s", [[relationship destinationEntity] name]];
 		else
-			cell.detailTextLabel.text = [[managedObject valueForKey:relationshipName] dct_niceDescription];
+			cell.detailTextLabel.text = [[self.managedObject valueForKey:relationshipName] dct_niceDescription];
 		
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
@@ -116,20 +106,20 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 	return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	if ((NSInteger)indexPath.section == DCTManagedObjectViewControllerRelationshipSection) {
 		
-		NSString *relationshipName = [relationships objectAtIndex:indexPath.row];
+		NSString *relationshipName = [_relationships objectAtIndex:indexPath.row];
 		
 		NSRelationshipDescription *relationship = [[[self.managedObject entity] relationshipsByName] objectForKey:relationshipName];
 		
 		if (![relationship isToMany]) {
 			
-			NSManagedObject *mo = [managedObject valueForKey:relationshipName];
-			
-			DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
-			vc.managedObject = mo;
+			NSManagedObject *managedObject = [self.managedObject valueForKey:relationshipName];
+			DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
 			[self.navigationController pushViewController:vc animated:YES];
 			
 		} else {

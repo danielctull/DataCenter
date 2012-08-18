@@ -63,9 +63,9 @@
     
 	NSEntityDescription *entity = [_entities objectAtIndex:indexPath.section];
 	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
-	NSManagedObject *mo = [objects objectAtIndex:indexPath.row];
+	NSManagedObject *managedObject = [objects objectAtIndex:indexPath.row];
 	
-	cell.textLabel.text = [mo dct_niceDescription];
+	cell.textLabel.text = [managedObject dct_niceDescription];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
     return cell;
@@ -77,10 +77,9 @@
 	
 	NSEntityDescription *entity = [_entities objectAtIndex:indexPath.section];
 	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
-	NSManagedObject *mo = [objects objectAtIndex:indexPath.row];
+	NSManagedObject *managedObject = [objects objectAtIndex:indexPath.row];
 	
-	DCTManagedObjectViewController *vc = [DCTManagedObjectViewController new];
-	vc.managedObject = mo;
+	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 

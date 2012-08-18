@@ -11,6 +11,7 @@
 
 @interface DCTManagedObjectViewController : UITableViewController
 
-@property (nonatomic, strong) NSManagedObject *managedObject;
+- (id)initWithManagedObject:(NSManagedObject *)managedObject;
+@property (nonatomic, strong, readonly) NSManagedObject *managedObject;
 
 @end

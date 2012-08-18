@@ -54,8 +54,8 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
-	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
-	vc.managedObject = [_relatedObjects objectAtIndex:indexPath.row];
+	NSManagedObject *managedObject = [_relatedObjects objectAtIndex:indexPath.row];
+	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 
