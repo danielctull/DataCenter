@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		245A59D915DFDF0A00C6B474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245A59D815DFDF0A00C6B474 /* Foundation.framework */; };
+		245A59DE15DFDF0A00C6B474 /* DataCenter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 245A59DD15DFDF0A00C6B474 /* DataCenter.h */; };
+		245A59E015DFDF0A00C6B474 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59DF15DFDF0A00C6B474 /* DataCenter.m */; };
+		245A59F315DFDFF300C6B474 /* DCTDataCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */; };
+		245A59F415DFDFF300C6B474 /* DCTManagedObjectContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */; };
+		245A59F515DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */; };
+		245A59F615DFDFF300C6B474 /* DCTManagedObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F015DFDFF300C6B474 /* DCTManagedObjectViewController.m */; };
+		245A59F715DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59F215DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m */; };
+		245A59F915DFDFFB00C6B474 /* DCTDataCenterController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		245A59D315DFDF0A00C6B474 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				245A59DE15DFDF0A00C6B474 /* DataCenter.h in CopyFiles */,
+				245A59F915DFDFFB00C6B474 /* DCTDataCenterController.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		245A59D515DFDF0A00C6B474 /* libDataCenter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDataCenter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		245A59D815DFDF0A00C6B474 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		245A59DC15DFDF0A00C6B474 /* DataCenter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataCenter-Prefix.pch"; sourceTree = "<group>"; };
+		245A59DD15DFDF0A00C6B474 /* DataCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		245A59DF15DFDF0A00C6B474 /* DataCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTDataCenterController.h; sourceTree = "<group>"; };
+		245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTDataCenterController.m; sourceTree = "<group>"; };
+		245A59EB15DFDFF300C6B474 /* DCTManagedObjectContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectContextViewController.h; sourceTree = "<group>"; };
+		245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectContextViewController.m; sourceTree = "<group>"; };
+		245A59ED15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectRelationshipsViewController.h; sourceTree = "<group>"; };
+		245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectRelationshipsViewController.m; sourceTree = "<group>"; };
+		245A59EF15DFDFF300C6B474 /* DCTManagedObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectViewController.h; sourceTree = "<group>"; };
+		245A59F015DFDFF300C6B474 /* DCTManagedObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTManagedObjectViewController.m; sourceTree = "<group>"; };
+		245A59F115DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+DCTNiceDescription.h"; sourceTree = "<group>"; };
+		245A59F215DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+DCTNiceDescription.m"; sourceTree = "<group>"; };
+		245A59FB15DFE01C00C6B474 /* Address.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		245A59FC15DFE01C00C6B474 /* Address.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		245A59FD15DFE01C00C6B474 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		245A59FE15DFE01C00C6B474 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		245A59FF15DFE01C00C6B474 /* SampleCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleCoreData.sqlite; sourceTree = "<group>"; };
+		245A5A0115DFE01C00C6B474 /* SampleCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleCoreData.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		245A59D215DFDF0A00C6B474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245A59D915DFDF0A00C6B474 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		245A59CA15DFDF0A00C6B474 = {
+			isa = PBXGroup;
+			children = (
+				245A59DA15DFDF0A00C6B474 /* DataCenter */,
+				245A59FA15DFE01C00C6B474 /* SampleCoreData */,
+				245A59D715DFDF0A00C6B474 /* Frameworks */,
+				245A59D615DFDF0A00C6B474 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		245A59D615DFDF0A00C6B474 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				245A59D515DFDF0A00C6B474 /* libDataCenter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		245A59D715DFDF0A00C6B474 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				245A59D815DFDF0A00C6B474 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		245A59DA15DFDF0A00C6B474 /* DataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				245A59DD15DFDF0A00C6B474 /* DataCenter.h */,
+				245A59DF15DFDF0A00C6B474 /* DataCenter.m */,
+				245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */,
+				245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */,
+				245A59EB15DFDFF300C6B474 /* DCTManagedObjectContextViewController.h */,
+				245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */,
+				245A59ED15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.h */,
+				245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */,
+				245A59EF15DFDFF300C6B474 /* DCTManagedObjectViewController.h */,
+				245A59F015DFDFF300C6B474 /* DCTManagedObjectViewController.m */,
+				245A59F115DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.h */,
+				245A59F215DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m */,
+				245A59DB15DFDF0A00C6B474 /* Supporting Files */,
+			);
+			path = DataCenter;
+			sourceTree = "<group>";
+		};
+		245A59DB15DFDF0A00C6B474 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				245A59DC15DFDF0A00C6B474 /* DataCenter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		245A59FA15DFE01C00C6B474 /* SampleCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				245A59FB15DFE01C00C6B474 /* Address.h */,
+				245A59FC15DFE01C00C6B474 /* Address.m */,
+				245A59FD15DFE01C00C6B474 /* Person.h */,
+				245A59FE15DFE01C00C6B474 /* Person.m */,
+				245A59FF15DFE01C00C6B474 /* SampleCoreData.sqlite */,
+				245A5A0015DFE01C00C6B474 /* SampleCoreData.xcdatamodeld */,
+			);
+			path = SampleCoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		245A59D415DFDF0A00C6B474 /* DataCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 245A59E315DFDF0A00C6B474 /* Build configuration list for PBXNativeTarget "DataCenter" */;
+			buildPhases = (
+				245A59D115DFDF0A00C6B474 /* Sources */,
+				245A59D215DFDF0A00C6B474 /* Frameworks */,
+				245A59D315DFDF0A00C6B474 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataCenter;
+			productName = DataCenter;
+			productReference = 245A59D515DFDF0A00C6B474 /* libDataCenter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		245A59CC15DFDF0A00C6B474 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Daniel Tull";
+			};
+			buildConfigurationList = 245A59CF15DFDF0A00C6B474 /* Build configuration list for PBXProject "DataCenter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 245A59CA15DFDF0A00C6B474;
+			productRefGroup = 245A59D615DFDF0A00C6B474 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				245A59D415DFDF0A00C6B474 /* DataCenter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		245A59D115DFDF0A00C6B474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245A59E015DFDF0A00C6B474 /* DataCenter.m in Sources */,
+				245A59F315DFDFF300C6B474 /* DCTDataCenterController.m in Sources */,
+				245A59F415DFDFF300C6B474 /* DCTManagedObjectContextViewController.m in Sources */,
+				245A59F515DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m in Sources */,
+				245A59F615DFDFF300C6B474 /* DCTManagedObjectViewController.m in Sources */,
+				245A59F715DFDFF300C6B474 /* NSManagedObject+DCTNiceDescription.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		245A59E115DFDF0A00C6B474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		245A59E215DFDF0A00C6B474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		245A59E415DFDF0A00C6B474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DataCenter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenter/DataCenter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		245A59E515DFDF0A00C6B474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DataCenter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenter/DataCenter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		245A59CF15DFDF0A00C6B474 /* Build configuration list for PBXProject "DataCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245A59E115DFDF0A00C6B474 /* Debug */,
+				245A59E215DFDF0A00C6B474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		245A59E315DFDF0A00C6B474 /* Build configuration list for PBXNativeTarget "DataCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				245A59E415DFDF0A00C6B474 /* Debug */,
+				245A59E515DFDF0A00C6B474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		245A5A0015DFE01C00C6B474 /* SampleCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				245A5A0115DFE01C00C6B474 /* SampleCoreData.xcdatamodel */,
+			);
+			currentVersion = 245A5A0115DFE01C00C6B474 /* SampleCoreData.xcdatamodel */;
+			path = SampleCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 245A59CC15DFDF0A00C6B474 /* Project object */;
+}
