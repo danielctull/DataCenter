@@ -7,7 +7,7 @@
 //
 
 #import "_DCTManagedObjectContextViewController.h"
-#import "DCTManagedObjectViewController.h"
+#import "_DCTManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
 @implementation _DCTManagedObjectContextViewController {
@@ -79,7 +79,7 @@
 	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
 	NSManagedObject *managedObject = [objects objectAtIndex:indexPath.row];
 	
-	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
+	_DCTManagedObjectViewController *vc = [[_DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 

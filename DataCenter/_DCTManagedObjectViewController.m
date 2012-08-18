@@ -6,17 +6,17 @@
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "DCTManagedObjectViewController.h"
+#import "_DCTManagedObjectViewController.h"
 #import "_DCTManagedObjectRelationshipsViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
 NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
 NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 
-@interface DCTManagedObjectViewController ()
+@interface _DCTManagedObjectViewController ()
 @end
 
-@implementation DCTManagedObjectViewController {
+@implementation _DCTManagedObjectViewController {
 	__strong NSArray *_relationships;
 	__strong NSArray *_attributes;
 }
@@ -119,7 +119,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		if (![relationship isToMany]) {
 			
 			NSManagedObject *managedObject = [self.managedObject valueForKey:relationshipName];
-			DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
+			_DCTManagedObjectViewController *vc = [[_DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
 			[self.navigationController pushViewController:vc animated:YES];
 			
 		} else {

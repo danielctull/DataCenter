@@ -7,7 +7,7 @@
 //
 
 #import "_DCTManagedObjectRelationshipsViewController.h"
-#import "DCTManagedObjectViewController.h"
+#import "_DCTManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
 @implementation _DCTManagedObjectRelationshipsViewController {
@@ -55,7 +55,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
 	NSManagedObject *managedObject = [_relatedObjects objectAtIndex:indexPath.row];
-	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
+	_DCTManagedObjectViewController *vc = [[_DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 
