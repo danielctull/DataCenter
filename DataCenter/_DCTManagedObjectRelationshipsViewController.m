@@ -6,48 +6,33 @@
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "DCTManagedObjectRelationshipsViewController.h"
+#import "_DCTManagedObjectRelationshipsViewController.h"
 #import "DCTManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
-@interface DCTManagedObjectRelationshipsViewController ()
-- (void)setupRelatedObjects;
-@end
-
-@implementation DCTManagedObjectRelationshipsViewController {
-	__strong NSArray *relatedObjects;
+@implementation _DCTManagedObjectRelationshipsViewController {
+	__strong NSArray *_relatedObjects;
 }
 
-@synthesize managedObject, relationship;
-
-- (id)init {
-	return [self initWithStyle:UITableViewStyleGrouped];
-}
-
-- (void)setManagedObject:(NSManagedObject *)mo {
-	managedObject = mo;
-	[self setupRelatedObjects];
-}
-
-- (void)setupRelatedObjects {
+- (id)initWithManagedObject:(NSManagedObject *)managedObject relationship:(NSRelationshipDescription *)relationship {
 	
-	if (!(self.managedObject) || !(self.relationship)) return;
+	self = [self initWithStyle:UITableViewStyleGrouped];
+	if (!self) return nil;
+	
+	_managedObject = managedObject;
+	_relationship = relationship;
+	self.title = [_relationship name];
 	
 	NSSet *ro = [self.managedObject valueForKey:[relationship name]];
+	_relatedObjects = [ro allObjects];
 	
-	relatedObjects = [ro allObjects];
+	return self;	
 }
 
-- (void)setRelationship:(NSRelationshipDescription *)r {
-	relationship = r;
-	
-	self.title = [relationship name];
-	
-	[self setupRelatedObjects];
-}
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [relatedObjects count];
+    return [_relatedObjects count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,18 +45,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
 									   reuseIdentifier:CellIdentifier];
     
-	cell.textLabel.text = [[relatedObjects objectAtIndex:indexPath.row] dct_niceDescription];
+	cell.textLabel.text = [[_relatedObjects objectAtIndex:indexPath.row] dct_niceDescription];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;	
 	
     return cell;
 }
 
-#pragma mark - Table view delegate
+#pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
 	DCTManagedObjectViewController *vc = [[DCTManagedObjectViewController alloc] init];
-	vc.managedObject = [relatedObjects objectAtIndex:indexPath.row];
+	vc.managedObject = [_relatedObjects objectAtIndex:indexPath.row];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 

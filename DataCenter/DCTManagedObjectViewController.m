@@ -7,7 +7,7 @@
 //
 
 #import "DCTManagedObjectViewController.h"
-#import "DCTManagedObjectRelationshipsViewController.h"
+#import "_DCTManagedObjectRelationshipsViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
 NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
@@ -134,9 +134,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 			
 		} else {
 			
-			DCTManagedObjectRelationshipsViewController *vc = [[DCTManagedObjectRelationshipsViewController alloc] init];
-			vc.managedObject = self.managedObject;
-			vc.relationship = relationship;
+			_DCTManagedObjectRelationshipsViewController *vc = [[_DCTManagedObjectRelationshipsViewController alloc] initWithManagedObject:self.managedObject relationship:relationship];
 			[self.navigationController pushViewController:vc animated:YES];
 			
 			
