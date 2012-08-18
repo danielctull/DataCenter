@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		245A59D915DFDF0A00C6B474 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245A59D815DFDF0A00C6B474 /* Foundation.framework */; };
 		245A59DE15DFDF0A00C6B474 /* DataCenter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 245A59DD15DFDF0A00C6B474 /* DataCenter.h */; };
-		245A59E015DFDF0A00C6B474 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59DF15DFDF0A00C6B474 /* DataCenter.m */; };
 		245A59F315DFDFF300C6B474 /* DCTDataCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */; };
 		245A59F415DFDFF300C6B474 /* DCTManagedObjectContextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EC15DFDFF300C6B474 /* DCTManagedObjectContextViewController.m */; };
 		245A59F515DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 245A59EE15DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m */; };
@@ -37,7 +36,6 @@
 		245A59D815DFDF0A00C6B474 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		245A59DC15DFDF0A00C6B474 /* DataCenter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataCenter-Prefix.pch"; sourceTree = "<group>"; };
 		245A59DD15DFDF0A00C6B474 /* DataCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
-		245A59DF15DFDF0A00C6B474 /* DataCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTDataCenterController.h; sourceTree = "<group>"; };
 		245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTDataCenterController.m; sourceTree = "<group>"; };
 		245A59EB15DFDFF300C6B474 /* DCTManagedObjectContextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTManagedObjectContextViewController.h; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				245A59DD15DFDF0A00C6B474 /* DataCenter.h */,
-				245A59DF15DFDF0A00C6B474 /* DataCenter.m */,
 				245A59E915DFDFF300C6B474 /* DCTDataCenterController.h */,
 				245A59EA15DFDFF300C6B474 /* DCTDataCenterController.m */,
 				245A59EB15DFDFF300C6B474 /* DCTManagedObjectContextViewController.h */,
@@ -186,7 +183,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245A59E015DFDF0A00C6B474 /* DataCenter.m in Sources */,
 				245A59F315DFDFF300C6B474 /* DCTDataCenterController.m in Sources */,
 				245A59F415DFDFF300C6B474 /* DCTManagedObjectContextViewController.m in Sources */,
 				245A59F515DFDFF300C6B474 /* DCTManagedObjectRelationshipsViewController.m in Sources */,

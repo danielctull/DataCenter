@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DCTDataCenterController : UIViewController
+@interface DCTDataCenterController : UINavigationController
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-
-- (IBAction)dismiss:(id)sender;
-
-@property (nonatomic, retain) UIViewController *viewController;
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
 
 @end
