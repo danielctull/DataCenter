@@ -1,16 +1,16 @@
 //
-//  DCTManagedObjectContextViewController.m
-//  DCTCoreDataBrowser
+//  DCTDataCenterManagedObjectContextViewController.m
+//  DataCenter
 //
 //  Created by Daniel Tull on 23.02.2011.
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "_DCTManagedObjectContextViewController.h"
-#import "_DCTManagedObjectViewController.h"
+#import "_DCTDataCenterManagedObjectContextViewController.h"
+#import "_DCTDataCenterManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
-@implementation _DCTManagedObjectContextViewController {
+@implementation _DCTDataCenterManagedObjectContextViewController {
 	__strong NSArray *_entities;
 	__strong NSMutableDictionary *_fetchedEntities;
 }
@@ -79,7 +79,7 @@
 	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
 	NSManagedObject *managedObject = [objects objectAtIndex:indexPath.row];
 	
-	_DCTManagedObjectViewController *vc = [[_DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
+	_DCTDataCenterManagedObjectViewController *vc = [[_DCTDataCenterManagedObjectViewController alloc] initWithManagedObject:managedObject];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 

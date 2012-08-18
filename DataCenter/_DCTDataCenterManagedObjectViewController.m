@@ -1,22 +1,19 @@
 //
-//  DCTManagedObjectViewController.m
-//  DCTCoreDataBrowser
+//  DCTDataCenterManagedObjectViewController.m
+//  DataCenter
 //
 //  Created by Daniel Tull on 23.02.2011.
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "_DCTManagedObjectViewController.h"
-#import "_DCTManagedObjectRelationshipsViewController.h"
+#import "_DCTDataCenterManagedObjectViewController.h"
+#import "_DCTDataCenterManagedObjectRelationshipsViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
 NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
 NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 
-@interface _DCTManagedObjectViewController ()
-@end
-
-@implementation _DCTManagedObjectViewController {
+@implementation _DCTDataCenterManagedObjectViewController {
 	__strong NSArray *_relationships;
 	__strong NSArray *_attributes;
 }
@@ -119,12 +116,12 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		if (![relationship isToMany]) {
 			
 			NSManagedObject *managedObject = [self.managedObject valueForKey:relationshipName];
-			_DCTManagedObjectViewController *vc = [[_DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
+			_DCTDataCenterManagedObjectViewController *vc = [[_DCTDataCenterManagedObjectViewController alloc] initWithManagedObject:managedObject];
 			[self.navigationController pushViewController:vc animated:YES];
 			
 		} else {
 			
-			_DCTManagedObjectRelationshipsViewController *vc = [[_DCTManagedObjectRelationshipsViewController alloc] initWithManagedObject:self.managedObject relationship:relationship];
+			_DCTDataCenterManagedObjectRelationshipsViewController *vc = [[_DCTDataCenterManagedObjectRelationshipsViewController alloc] initWithManagedObject:self.managedObject relationship:relationship];
 			[self.navigationController pushViewController:vc animated:YES];
 			
 			

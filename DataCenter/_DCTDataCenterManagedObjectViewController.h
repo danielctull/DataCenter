@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface _DCTManagedObjectViewController : UITableViewController
+@interface _DCTDataCenterManagedObjectViewController : UITableViewController
 
 - (id)initWithManagedObject:(NSManagedObject *)managedObject;
 @property (nonatomic, strong, readonly) NSManagedObject *managedObject;

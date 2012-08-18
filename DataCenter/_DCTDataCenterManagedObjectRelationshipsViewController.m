@@ -1,16 +1,16 @@
 //
-//  DCTManagedObjectRelationshipsViewController.m
-//  DCTCoreDataBrowser
+//  DCTDataCenterManagedObjectRelationshipsViewController.m
+//  DataCenter
 //
 //  Created by Daniel Tull on 23.02.2011.
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "_DCTManagedObjectRelationshipsViewController.h"
-#import "_DCTManagedObjectViewController.h"
+#import "_DCTDataCenterManagedObjectRelationshipsViewController.h"
+#import "_DCTDataCenterManagedObjectViewController.h"
 #import "NSManagedObject+DCTNiceDescription.h"
 
-@implementation _DCTManagedObjectRelationshipsViewController {
+@implementation _DCTDataCenterManagedObjectRelationshipsViewController {
 	__strong NSArray *_relatedObjects;
 }
 
@@ -55,7 +55,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
 	NSManagedObject *managedObject = [_relatedObjects objectAtIndex:indexPath.row];
-	_DCTManagedObjectViewController *vc = [[_DCTManagedObjectViewController alloc] initWithManagedObject:managedObject];
+	_DCTDataCenterManagedObjectViewController *vc = [[_DCTDataCenterManagedObjectViewController alloc] initWithManagedObject:managedObject];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 
