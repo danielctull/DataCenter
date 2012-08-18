@@ -8,7 +8,7 @@
 
 #import "_DCTDataCenterManagedObjectContextViewController.h"
 #import "_DCTDataCenterManagedObjectViewController.h"
-#import "NSManagedObject+DCTNiceDescription.h"
+#import "NSManagedObject+DCTDataCenterNiceDescription.h"
 
 @implementation _DCTDataCenterManagedObjectContextViewController {
 	__strong NSArray *_entities;
@@ -65,7 +65,7 @@
 	NSArray *objects = [_fetchedEntities objectForKey:[entity name]];
 	NSManagedObject *managedObject = [objects objectAtIndex:indexPath.row];
 	
-	cell.textLabel.text = [managedObject dct_niceDescription];
+	cell.textLabel.text = [managedObject dctDataCenter_niceDescription];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
     return cell;

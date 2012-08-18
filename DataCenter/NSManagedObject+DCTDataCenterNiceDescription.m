@@ -1,17 +1,17 @@
 //
-//  NSManagedObject+DCTNiceDescription.m
-//  DCTCoreDataBrowser
+//  NSManagedObject+DCTDataCenterNiceDescription.m
+//  DataCenter
 //
 //  Created by Daniel Tull on 23.02.2011.
 //  Copyright 2011 Daniel Tull. All rights reserved.
 //
 
-#import "NSManagedObject+DCTNiceDescription.h"
+#import "NSManagedObject+DCTDataCenterNiceDescription.h"
 
 
-@implementation NSManagedObject (DCTNiceDescription)
+@implementation NSManagedObject (DCTDataCenterNiceDescription)
 
-- (NSString *)dct_niceDescription {
+- (NSString *)dctDataCenter_niceDescription {
 	
 	NSEntityDescription *entity = [self entity];
 	

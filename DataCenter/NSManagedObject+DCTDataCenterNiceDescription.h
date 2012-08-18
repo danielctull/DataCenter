@@ -1,6 +1,6 @@
 //
 //  NSManagedObject+DCTNiceDescription.h
-//  DCTCoreDataBrowser
+//  DataCenter
 //
 //  Created by Daniel Tull on 23.02.2011.
 //  Copyright 2011 Daniel Tull. All rights reserved.
@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface NSManagedObject (DCTNiceDescription)
+@interface NSManagedObject (DCTDataCenterNiceDescription)
 
-- (NSString *)dct_niceDescription;
+- (NSString *)dctDataCenter_niceDescription;
 
 @end

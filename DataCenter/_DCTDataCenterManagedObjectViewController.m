@@ -8,7 +8,7 @@
 
 #import "_DCTDataCenterManagedObjectViewController.h"
 #import "_DCTDataCenterManagedObjectRelationshipsViewController.h"
-#import "NSManagedObject+DCTNiceDescription.h"
+#import "NSManagedObject+DCTDataCenterNiceDescription.h"
 
 NSInteger const DCTManagedObjectViewControllerAttributeSection = 1;
 NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
@@ -95,7 +95,7 @@ NSInteger const DCTManagedObjectViewControllerRelationshipSection = 2;
 		if ([relationship isToMany])
 			cell.detailTextLabel.text = [NSString stringWithFormat:@"Many %@s", [[relationship destinationEntity] name]];
 		else
-			cell.detailTextLabel.text = [[self.managedObject valueForKey:relationshipName] dct_niceDescription];
+			cell.detailTextLabel.text = [[self.managedObject valueForKey:relationshipName] dctDataCenter_niceDescription];
 		
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}

@@ -8,7 +8,7 @@
 
 #import "_DCTDataCenterManagedObjectRelationshipsViewController.h"
 #import "_DCTDataCenterManagedObjectViewController.h"
-#import "NSManagedObject+DCTNiceDescription.h"
+#import "NSManagedObject+DCTDataCenterNiceDescription.h"
 
 @implementation _DCTDataCenterManagedObjectRelationshipsViewController {
 	__strong NSArray *_relatedObjects;
@@ -45,7 +45,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
 									   reuseIdentifier:CellIdentifier];
     
-	cell.textLabel.text = [[_relatedObjects objectAtIndex:indexPath.row] dct_niceDescription];
+	cell.textLabel.text = [[_relatedObjects objectAtIndex:indexPath.row] dctDataCenter_niceDescription];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;	
 	
     return cell;
