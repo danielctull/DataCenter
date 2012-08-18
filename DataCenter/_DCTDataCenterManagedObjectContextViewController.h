@@ -11,5 +11,5 @@
 
 @interface _DCTDataCenterManagedObjectContextViewController : UITableViewController
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
-@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 @end
